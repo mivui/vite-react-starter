@@ -1,0 +1,8 @@
+node_modules
+dist
+build
+package.json
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
