@@ -6,9 +6,6 @@
       "DOM.Iterable",
       "ESNext"
     ],
-    "types": [
-      "vite/client"
-    ],
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
@@ -20,7 +17,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -29,11 +26,10 @@
     }
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx"
+    "./src"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

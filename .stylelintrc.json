@@ -1,12 +1,16 @@
 {
   "extends": [
-   "stylelint-config-standard"
-  ,"stylelint-config-prettier"
+    "stylelint-config-standard",
+    "stylelint-config-prettier"
   ],
   "plugins": [
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-a11y"
   ],
   "rules": {
+    "a11y/media-prefers-reduced-motion": true,
+    "a11y/no-outline-none": true,
+    "a11y/selector-pseudo-class-focus": true,
     "order/order": [
       "custom-properties",
       "declarations"
@@ -14,6 +18,14 @@
     "order/properties-order": [
       "width",
       "height"
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
     ]
   }
 }
