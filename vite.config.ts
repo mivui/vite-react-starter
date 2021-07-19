@@ -4,7 +4,8 @@ import reactRefresh from '@vitejs/plugin-react-refresh';
 import ViteStyleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
-  plugins: [reactRefresh(),
+  plugins: [
+    reactRefresh(),
     ViteStyleImport({
       libs: [
         {
@@ -13,9 +14,10 @@ export default defineConfig({
           resolveStyle: (name) => {
             return `antd/es/${name}/style/index`;
           },
-        }
+        },
       ],
-    })],
+    }),
+  ],
   resolve: {
     alias: [
       {
