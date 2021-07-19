@@ -43,6 +43,7 @@ module.exports = {
     'no-param-reassign': 'off',
     'consistent-return': 'off',
     'import/extensions': 'off',
+    'import/no-unresolved': 'off',
     'prettier/prettier': 'error',
     'object-curly-newline': 'off',
     'no-underscore-dangle': 'off',
