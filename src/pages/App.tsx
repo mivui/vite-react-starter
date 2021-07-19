@@ -22,7 +22,7 @@ function App() {
         </p>
         <p>
           <a
-            className={styles.appLinkA}
+            className={styles.appLink}
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer">
