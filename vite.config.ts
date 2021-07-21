@@ -1,10 +1,18 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import legacy from '@vitejs/plugin-legacy';
 import reactRefresh from '@vitejs/plugin-react-refresh';
 import ViteStyleImport from 'vite-plugin-style-import';
 
 export default defineConfig({
   plugins: [
+    legacy({
+      targets: ['ie >= 11'],
+      additionalLegacyPolyfills: [
+        'core-js/stable',
+        'regenerator-runtime/runtime',
+      ],
+    }),
     reactRefresh(),
     ViteStyleImport({
       libs: [
