@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "eslint": "eslint --fix",
+    "stylelint": "stylelint **/*.less",
+    "test": "jest"
   },
   "dependencies": {
     "mobx": "^6.3.2",
