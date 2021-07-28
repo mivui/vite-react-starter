@@ -1,43 +1,20 @@
-import React, { useState } from 'react';
-import logo from '@/assets/logo.svg';
-import styles from './app.module.css';
+import React, { useEffect } from 'react';
+import { renderRoutes, RouteConfigComponentProps } from 'react-router-config';
+import NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
+import './index.css';
 
-function App() {
-  const [count, setCount] = useState(0);
+function App(props: RouteConfigComponentProps) {
+  const { route } = props;
 
-  return (
-    <div className={styles.app}>
-      <header className={styles.appHeader}>
-        <img src={logo} className={styles.appLogo} alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((value) => value + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className={styles.appLink}
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className={styles.appLink}
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer">
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  );
+  NProgress.configure({ showSpinner: false });
+  NProgress.start();
+
+  useEffect(() => {
+    NProgress.done();
+  });
+
+  return <>{route ? renderRoutes(route.routes) : null}</>;
 }
 
 export default App;
