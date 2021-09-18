@@ -48,6 +48,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'no-underscore-dangle': 'off',
     'react/display-name': 0,
+    'react/react-in-jsx-scope': 0,
     'react/jsx-filename-extension': 0,
     'prefer-promise-reject-errors': 'off',
     'import/prefer-default-export': 'off',
