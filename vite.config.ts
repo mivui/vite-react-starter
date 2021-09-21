@@ -1,29 +1,32 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
-import legacy from '@vitejs/plugin-legacy';
-import reactRefresh from '@vitejs/plugin-react-refresh';
-import ViteStyleImport from 'vite-plugin-style-import';
+import ViteReact from '@vitejs/plugin-react';
+import VitePresetEnv from '@vitejs/plugin-legacy';
 
 export default defineConfig({
   plugins: [
-    legacy({
+    VitePresetEnv({
       targets: ['ie >= 11'],
       additionalLegacyPolyfills: [
         'core-js/stable',
         'regenerator-runtime/runtime',
       ],
     }),
-    reactRefresh(),
-    ViteStyleImport({
-      libs: [
-        {
-          libraryName: 'antd',
-          esModule: true,
-          resolveStyle: (name) => {
-            return `antd/es/${name}/style/index`;
-          },
-        },
-      ],
+    ViteReact({
+      fastRefresh: true,
+      jsxRuntime: 'automatic',
+      babel: {
+        plugins: [
+          [
+            'import',
+            {
+              libraryName: 'antd',
+              libraryDirectory: 'es',
+              style: true,
+            },
+          ],
+        ],
+      },
     }),
   ],
   resolve: {

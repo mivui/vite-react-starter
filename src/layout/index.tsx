@@ -1,20 +1,16 @@
 import { useEffect } from 'react';
-import { renderRoutes, RouteConfigComponentProps } from 'react-router-config';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import './index.css';
 
-function Layouts(props: RouteConfigComponentProps) {
-  const { route } = props;
-
+function Layout() {
   NProgress.configure({ showSpinner: false });
   NProgress.start();
 
   useEffect(() => {
     NProgress.done();
   });
-
-  return <>{route ? renderRoutes(route.routes) : null}</>;
+  return <div />;
 }
 
-export default Layouts;
+export default Layout;
