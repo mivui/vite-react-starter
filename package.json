@@ -1,5 +1,5 @@
 {
-  "name": "vite-react",
+  "name": "vite-react-starter",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -11,9 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "antd": "^4.16.13",
     "history": "^5.0.1",
-    "mobx": "^6.3.3",
     "nprogress": "^0.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
