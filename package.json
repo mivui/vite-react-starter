@@ -13,8 +13,8 @@
   "dependencies": {
     "history": "^5.0.1",
     "nprogress": "^0.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-router-dom": "^6.0.0-beta.4"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
     "@vitejs/plugin-legacy": "^1.5.3",
-    "@vitejs/plugin-react": "^1.0.0-beta.0",
+    "@vitejs/plugin-react": "^1.0.1",
     "babel-plugin-import": "^1.13.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
