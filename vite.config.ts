@@ -1,9 +1,15 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import ViteReact from '@vitejs/plugin-react';
 import VitePresetEnv from '@vitejs/plugin-legacy';
 
 export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'happy-dom',
+  },
   plugins: [
     VitePresetEnv({
       targets: ['ie >= 11'],
@@ -32,7 +38,7 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '@',
+        find: '~',
         replacement: resolve(__dirname, 'src'),
       },
     ],

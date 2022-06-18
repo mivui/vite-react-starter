@@ -2,11 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    'jest/globals': true,
   },
   extends: [
     'airbnb',
-    'plugin:jest/recommended',
     'plugin:react/recommended',
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
@@ -20,14 +18,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'prettier',
-    'jest',
-    'jsx-a11y',
-    'import',
-  ],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'jsx-a11y', 'import'],
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',

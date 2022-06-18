@@ -1,7 +1,7 @@
 import { Route, Navigate } from 'react-router-dom';
-import Layout from '@/layout';
-import HelloWord from '@/pages/HelloWord';
-import NotFound from '@/pages/NotFound';
+import Layout from '~/layout';
+import HelloWord from '~/pages/HelloWord';
+import NotFound from '~/pages/NotFound';
 
 function PublicRouter() {
   return (
@@ -13,4 +13,5 @@ function PublicRouter() {
     </>
   );
 }
+
 export default PublicRouter;
