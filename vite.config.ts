@@ -3,7 +3,7 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import ViteReact from '@vitejs/plugin-react';
-import VitePresetEnv from '@vitejs/plugin-legacy';
+import Legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig({
   test: {
@@ -11,7 +11,7 @@ export default defineConfig({
     environment: 'happy-dom',
   },
   plugins: [
-    VitePresetEnv({
+    Legacy({
       targets: ['ie >= 11'],
       additionalLegacyPolyfills: [
         'core-js/stable',
@@ -38,8 +38,8 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: '~',
-        replacement: resolve(__dirname, 'src'),
+        find: '~/',
+        replacement: `${resolve(__dirname, 'src')}/`,
       },
     ],
   },
