@@ -7,7 +7,6 @@
     "stylelint-order"
   ],
   "rules": {
-    "prettier/prettier": true,
     "order/order": [
       "custom-properties",
       "declarations"
