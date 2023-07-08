@@ -1,7 +1,7 @@
 {
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-prettier"
+    "stylelint-config-recommended"
   ],
   "plugins": [
     "stylelint-order"
@@ -14,14 +14,6 @@
     "order/properties-order": [
       "width",
       "height"
-    ],
-    "selector-pseudo-class-no-unknown": [
-      true,
-      {
-        "ignorePseudoClasses": [
-          "global"
-        ]
-      }
     ]
   }
 }

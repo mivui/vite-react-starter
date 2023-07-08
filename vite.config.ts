@@ -1,14 +1,18 @@
-/// <reference types="vitest" />
-
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import ViteReact from '@vitejs/plugin-react';
 import Legacy from '@vitejs/plugin-legacy';
+import PolyfillCommonjs from 'vite-polyfill-commonjs';
 
 export default defineConfig({
-  test: {
-    globals: true,
-    environment: 'happy-dom',
+  resolve: {
+    alias: [
+      {
+        find: '~/',
+        replacement: `${resolve(__dirname, 'src')}/`,
+      },
+      ...PolyfillCommonjs(),
+    ],
   },
   plugins: [
     Legacy({
@@ -19,7 +23,6 @@ export default defineConfig({
       ],
     }),
     ViteReact({
-      fastRefresh: true,
       jsxRuntime: 'automatic',
       babel: {
         plugins: [
@@ -35,14 +38,7 @@ export default defineConfig({
       },
     }),
   ],
-  resolve: {
-    alias: [
-      {
-        find: '~/',
-        replacement: `${resolve(__dirname, 'src')}/`,
-      },
-    ],
-  },
+
   css: {
     preprocessorOptions: {
       less: {
@@ -53,11 +49,22 @@ export default defineConfig({
       localsConvention: 'camelCaseOnly',
     },
   },
+  esbuild: {
+    pure: ['console.log'],
+    drop: ['debugger'],
+  },
   build: {
-    target: 'modules',
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
+    chunkSizeWarningLimit: 1024,
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
+  },
+  preview: {
+    host: '0.0.0.0',
+    port: 8080,
   },
   server: {
     host: '0.0.0.0',

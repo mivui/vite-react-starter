@@ -3,6 +3,9 @@
     "browser": true,
     "es2021": true
   },
+  "globals": {
+    "NodeJS": "readonly"
+  },
   "extends": [
     "airbnb",
     "plugin:react/recommended",
@@ -18,13 +21,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint",
-    "prettier",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": ["react", "@typescript-eslint", "prettier", "jsx-a11y", "import"],
   "rules": {
     "no-console": "off",
     "no-debugger": "off",
@@ -44,13 +41,19 @@
     "prettier/prettier": "error",
     "object-curly-newline": "off",
     "no-underscore-dangle": "off",
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
     "react/display-name": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-filename-extension": 0,
     "prefer-promise-reject-errors": "off",
     "import/prefer-default-export": "off",
     "import/no-cycle": [
-      2,
+      "error",
       {
         "maxDepth": 1
       }
@@ -62,19 +65,16 @@
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "no-plusplus": [
+    "@typescript-eslint/consistent-type-imports": [
       "error",
       {
-        "allowForLoopAfterthoughts": true
+        "disallowTypeAnnotations": false
       }
     ]
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     }
   }
 }
