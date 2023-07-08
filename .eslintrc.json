@@ -7,21 +7,21 @@
     "NodeJS": "readonly"
   },
   "extends": [
-    "airbnb",
-    "plugin:react/recommended",
+    "eslint:recommended",
     "plugin:import/typescript",
-    "plugin:jsx-a11y/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "jsx-a11y", "import"],
+  "plugins": ["@typescript-eslint", "react", "prettier", "import"],
   "rules": {
     "no-console": "off",
     "no-debugger": "off",
@@ -47,9 +47,8 @@
         "allowForLoopAfterthoughts": true
       }
     ],
-    "react/display-name": 0,
-    "react/react-in-jsx-scope": 0,
-    "react/jsx-filename-extension": 0,
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "prefer-promise-reject-errors": "off",
     "import/prefer-default-export": "off",
     "import/no-cycle": [
