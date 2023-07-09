@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import ViteReact from '@vitejs/plugin-react';
 import Legacy from '@vitejs/plugin-legacy';
-import PolyfillCommonjs from 'vite-polyfill-commonjs';
+import PolyfillCommonjs from 'vite-plugin-polyfill-commonjs';
 
 export default defineConfig({
   resolve: {
@@ -11,7 +11,6 @@ export default defineConfig({
         find: '~/',
         replacement: `${resolve(__dirname, 'src')}/`,
       },
-      ...PolyfillCommonjs(),
     ],
   },
   plugins: [
@@ -37,6 +36,7 @@ export default defineConfig({
         ],
       },
     }),
+    PolyfillCommonjs(),
   ],
 
   css: {
