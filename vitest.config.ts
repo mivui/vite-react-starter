@@ -9,7 +9,7 @@ export default mergeConfig(
       globals: true,
       environment: 'happy-dom',
       transformMode: {
-        web: [/\.(vue|[tj]s|[tj]sx)$/],
+        web: [/\.([tj]s|[tj]sx)$/],
       },
     },
   }) as UserConfig,
