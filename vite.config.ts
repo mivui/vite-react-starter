@@ -58,9 +58,6 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: false,
     chunkSizeWarningLimit: 1024,
-    commonjsOptions: {
-      include: [/node_modules/],
-    },
   },
   preview: {
     host: '0.0.0.0',
