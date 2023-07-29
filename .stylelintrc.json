@@ -14,6 +14,14 @@
     "order/properties-order": [
       "width",
       "height"
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
     ]
   }
 }

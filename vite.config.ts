@@ -38,7 +38,6 @@ export default defineConfig({
     }),
     PolyfillNodejs(),
   ],
-
   css: {
     preprocessorOptions: {
       less: {
