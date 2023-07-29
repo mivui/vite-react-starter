@@ -1,4 +1,4 @@
-import { Route, Navigate } from 'react-router-dom';
+import { Navigate, Route } from 'react-router-dom';
 import Layout from '~/layout';
 import HelloWord from '~/pages/HelloWord';
 import NotFound from '~/pages/NotFound';
