@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import ViteReact from '@vitejs/plugin-react';
 import Legacy from '@vitejs/plugin-legacy';
-import PolyfillNodejs from 'vite-plugin-polyfill-nodejs';
 
 export default defineConfig({
   resolve: {
@@ -36,7 +35,6 @@ export default defineConfig({
         ],
       },
     }),
-    PolyfillNodejs(),
   ],
   css: {
     preprocessorOptions: {
