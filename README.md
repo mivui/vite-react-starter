@@ -1,4 +1,4 @@
 # vite-react-starter
 
-> Support React + TSX + ESLint + Prettier + Stylelint + Vitest + Polyfill
+> Support React + TSX + ESLint + Prettier + Stylelint + Vitest
 

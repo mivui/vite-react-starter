@@ -1,6 +1,7 @@
 {
   "name": "vite-react-starter",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
@@ -17,31 +18,31 @@
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.19.0"
   },
   "devDependencies": {
-    "@types/node": "^18.17.12",
-    "@types/nprogress": "^0.2.0",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.5.0",
-    "@typescript-eslint/parser": "^6.5.0",
-    "@vitejs/plugin-legacy": "^4.1.1",
-    "@vitejs/plugin-react": "^4.0.4",
-    "@vitest/coverage-v8": "^0.34.3",
+    "@types/node": "^20.9.2",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "@vitejs/plugin-legacy": "^5.0.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/coverage-v8": "^0.34.6",
     "babel-plugin-import": "^1.13.8",
-    "eslint": "^8.48.0",
+    "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.0.2",
-    "stylelint": "^15.10.3",
+    "prettier": "^3.1.0",
+    "stylelint": "^15.11.0",
     "stylelint-config-recommended": "^13.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^4.0.2",
     "typescript": "^5.2.2",
-    "vite": "^4.4.9",
-    "vitest": "^0.34.3"
+    "vite": "^5.0.0",
+    "vitest": "^0.34.6"
   }
 }
