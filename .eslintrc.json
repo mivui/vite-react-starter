@@ -21,7 +21,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react", "prettier"],
+  "plugins": ["@typescript-eslint", "react", "prettier", "simple-import-sort"],
   "rules": {
     "no-console": "off",
     "no-debugger": "off",
@@ -45,6 +45,8 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "prefer-promise-reject-errors": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "@typescript-eslint/no-shadow": "error",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-empty-function": "off",
@@ -55,16 +57,6 @@
       "error",
       {
         "disallowTypeAnnotations": false
-      }
-    ],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": true,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-        "allowSeparatedGroups": true
       }
     ]
   }
