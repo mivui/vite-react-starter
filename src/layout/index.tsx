@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
-import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 import './index.css';
+
+import NProgress from 'nprogress';
+import { useEffect } from 'react';
 
 function Layout() {
   NProgress.configure({ showSpinner: false });

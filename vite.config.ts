@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite';
-import { resolve } from 'path';
-import ViteReact from '@vitejs/plugin-react';
 import Legacy from '@vitejs/plugin-legacy';
+import ViteReact from '@vitejs/plugin-react';
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
   resolve: {
