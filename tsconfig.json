@@ -17,7 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    /* project config */
+    /* Path config */
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"]
