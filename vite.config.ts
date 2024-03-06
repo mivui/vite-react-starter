@@ -1,4 +1,3 @@
-import Legacy from '@vitejs/plugin-legacy';
 import ViteReact from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
@@ -13,13 +12,6 @@ export default defineConfig({
     ],
   },
   plugins: [
-    Legacy({
-      targets: ['ie >= 11'],
-      additionalLegacyPolyfills: [
-        'core-js/stable',
-        'regenerator-runtime/runtime',
-      ],
-    }),
     ViteReact({
       jsxRuntime: 'automatic',
       babel: {
@@ -51,6 +43,7 @@ export default defineConfig({
     drop: ['debugger'],
   },
   build: {
+    target: 'es2020',
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
