@@ -13,7 +13,11 @@ function HelloWord() {
         <img src={logo} className={styles.appLogo} alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
-          <button type="button" onClick={() => setCount((value) => value + 1)}>
+          <button
+            type="button"
+            onClick={() => {
+              setCount((value) => value + 1);
+            }}>
             count is: {count}
           </button>
         </p>
