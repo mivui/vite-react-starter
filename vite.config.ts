@@ -1,4 +1,4 @@
-import ViteReact from '@vitejs/plugin-react';
+import React from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
@@ -11,23 +11,7 @@ export default defineConfig({
       },
     ],
   },
-  plugins: [
-    ViteReact({
-      jsxRuntime: 'automatic',
-      babel: {
-        plugins: [
-          [
-            'import',
-            {
-              libraryName: 'antd',
-              libraryDirectory: 'es',
-              style: true,
-            },
-          ],
-        ],
-      },
-    }),
-  ],
+  plugins: [React()],
   css: {
     preprocessorOptions: {
       less: {
@@ -38,16 +22,23 @@ export default defineConfig({
       localsConvention: 'camelCaseOnly',
     },
   },
-  esbuild: {
-    pure: ['console.log'],
-    drop: ['debugger'],
-  },
+  oxc: {},
   build: {
     target: 'es2020',
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     chunkSizeWarningLimit: 1024,
+    rolldownOptions: {
+      output: {
+        minify: {
+          compress: {
+            dropConsole: true,
+            dropDebugger: true,
+          },
+        },
+      },
+    },
   },
   preview: {
     host: '0.0.0.0',
